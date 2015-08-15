@@ -11,6 +11,7 @@
       text-align: center;
     }
     body {
+      height: 100%;
       display: table-cell;
       vertical-align: middle;
       background-color: #fff;
@@ -19,6 +20,30 @@
       color: #222;
       font-size: 15em;
       margin: 0 0 .5em;
+    }
+    canvas {
+      display: block;
+      vertical-align: bottom;
+    }
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+    }
+    #particles-js {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
     }
     @media only screen and (max-width: 560px) {
       body, h1 {
@@ -33,6 +58,13 @@
 </head>
 <body>
   <h1>Hi</h1>
+  <div class="overlay"></div>
+  <div id="particles-js"></div>
+
+  <script src="particles.js"></script>
+  <script>
+  particlesJS.load('particles-js', 'particles.json');
+  </script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
