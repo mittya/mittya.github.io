@@ -16,22 +16,25 @@
       vertical-align: middle;
       background-color: #fff;
     }
-    h1 {
+    p {
       color: #222;
-      font-size: 15em;
-      margin: 0 0 .5em;
+      font-size: 1.5em;
+      line-height: 1;
     }
     canvas {
       display: block;
       vertical-align: bottom;
     }
-    .overlay {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+    .content {
+      position: relative;
       z-index: 100;
+      padding-bottom: 100px;
+    }
+    .content a {
+      color: #ff7668;
+    }
+    .content a:hover {
+      text-decoration: none;
     }
     #particles-js {
       position: absolute;
@@ -57,13 +60,15 @@
   </style>
 </head>
 <body>
-  <h1>Hi</h1>
-  <div class="overlay"></div>
+  <div class="content">
+    <p>Hi, welcome</p>
+    <p>I'm mittya, work at <a href="http://zaiyu.co" target="_blank">zaiyu.co</a></p>
+  </div>
   <div id="particles-js"></div>
 
   <script src="particles.js"></script>
   <script>
-  particlesJS.load('particles-js', 'particles.json');
+    particlesJS.load('particles-js', 'particles.json');
   </script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
