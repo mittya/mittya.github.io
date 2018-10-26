@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <title>MittYa</title>
   <style>
+    html {
+      position: relative;
+      height: 100%;
+    }
     body {
       padding: 0;
-      background-color: #fff;
     }
     .content {
       padding: 50px;
@@ -16,25 +19,46 @@
       color: #222;
     }
     .content p {
+      padding: 0 2px;
       color: #222;
       font-size: 1.5em;
       line-height: 1.5;
     }
     .content a {
-      color: #ff7668;
+      color: #3e58a3;
     }
     .content a:hover {
       text-decoration: none;
     }
+    .img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -10;
+      width: 256px;
+      height: 256px;
+      background: url(favicon.png) right bottom no-repeat;
+      background-size: 100%;
+      opacity: .1;
+    }
+
+    @media (max-width: 800px) {
+      .content {
+        padding: 50px 20px;
+      }
+    }
   </style>
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
+
 <body>
   <div class="content">
-    <h1>Hi, I'm mittya</h1>
-    <p>Work at <a href="https://zaiyu.co" target="_blank">Zaiyu.co</a></p>
+    <h1>Hi, I'm mittya.</h1>
+    <p><a href="https://zaiyu.co" target="_blank">Zaiyu.co</a></p>
     <p><a href="https://ighelper.mittya.com" target="_blank">IG Helper</a> : Easily download Instagram pictures and videos.</p>
   </div>
+
+  <div class="img"></div>
 
   <!-- Google AdSense -->
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
