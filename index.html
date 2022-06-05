@@ -8,16 +8,23 @@
     html {
       position: relative;
       height: 100%;
+      font-family: sans-serif;
     }
     body {
       padding: 0;
+    }
+    img {
+        max-width: 100%;
+        vertical-align: top;
     }
     .content {
       padding: 50px;
     }
     .content h1 {
+      margin-bottom: 40px;
       font-size: 3em;
       color: #222;
+      font-weight: 700;
     }
     .content p {
       padding: 0 2px;
@@ -26,21 +33,115 @@
       line-height: 1.5;
     }
     .content a {
-      color: #3e58a3;
+      color: #4154f3;
     }
     .content a:hover {
       text-decoration: none;
     }
-    .img {
+    .bg {
       position: absolute;
       right: 0;
       bottom: 0;
       z-index: -10;
-      width: 256px;
-      height: 256px;
+      width: 800px;
+      height: 800px;
       background: url(favicon.png) right bottom no-repeat;
       background-size: 100%;
-      opacity: .1;
+      opacity: .02;
+    }
+    .qrc {
+        max-width: 176px;
+        margin-top: 50px;
+        opacity: .9;
+    }
+    .qrc p {
+      font-size: 12px !important;
+      color: #828282;
+      text-align: center;
+    }
+    .nickname {
+      position: relative;
+      margin-left: 12px;
+    }
+    .nickname:after {
+      content: "mittya";
+      position: absolute;
+      left: 0;
+      animation: changeName 8s ease infinite;
+      transition: transform .2s ease;
+      white-space: nowrap;
+    }
+
+    @keyframes changeName {
+      0% {
+        content: "mittya";
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      10% {
+        content: "mittya";
+        transform: translateY(0);
+        opacity: 1;
+      }
+      20% {
+        content: "mittya";
+        transform: translateY(0);
+        opacity: 1;
+      }
+      30% {
+        content: "mittya";
+        transform: translateY(5px);
+        opacity: 0;
+      }
+
+
+      31% {
+        content: "MittYa";
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      40% {
+        content: "MittYa";
+        transform: translateY(0);
+        opacity: 1;
+      }
+      50% {
+        content: "MittYa";
+        transform: translateY(0);
+        opacity: 1;
+      }
+      60% {
+        content: "MittYa";
+        transform: translateY(5px);
+        opacity: 0;
+      }
+
+      61% {
+        content: "绵羊";
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      70% {
+        content: "绵羊";
+        transform: translateY(0);
+        opacity: 1;
+      }
+      80% {
+        content: "绵羊";
+        transform: translateY(0);
+        opacity: 1;
+      }
+      90% {
+        content: "绵羊";
+        transform: translateY(5px);
+        opacity: 0;
+      }
+
+      100% {
+        content: "";
+        transform: translateY(0);
+        opacity: 0;
+      }
     }
 
     @media (max-width: 800px) {
@@ -48,7 +149,7 @@
         padding: 20px;
       }
       .content h1 {
-        font-size: 1.4em;
+        font-size: 2em;
       }
       .content p {
         font-size: 1em;
@@ -61,11 +162,15 @@
 
 <body>
   <div class="content">
-    <h1>Hi, I'm mittya.</h1>
-    <p><a href="https://zaiyu.co" target="_blank">Zaiyu.co</a></p>
-    <p><a href="https://github.com/mittya/media-helper" target="_blank" style="color: #f72b7f;">Media Helper</a> : Easily download Instagram pictures and videos</p>
-  </div>
+    <h1>Hi, I'm <span class="nickname"></span></h1>
 
-  <div class="img"></div>
+    <p><a href="https://zaiyu.co" target="_blank">Zaiyu.co</a> : A design and development studio</p>
+    <p><a href="https://github.com/mittya/media-helper" target="_blank" style="color: #fa28a3;">Media Helper</a> : Easily download Instagram pictures and videos</p>
+
+    <div class="qrc">
+        <img src="wechat.png" alt="WeChat">
+        <p>我的微信二维码，很高兴认识你</p>
+    </div>
+  </div>
 </body>
 </html>
